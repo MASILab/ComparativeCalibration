@@ -1,0 +1,46 @@
+name: cifar10_stage1_focal
+print_freq: 40
+workers: 16
+log_dir: '/media/gaor2/Elements/saved_file/Calibration/MiSLAS/imb001/stage1_imb001/logs'
+model_dir: '/media/gaor2/Elements/saved_file/Calibration/MiSLAS/imb001/stage1_imb001/ckps'
+code_dir: '/media/gaor2/Elements/saved_file/Calibration/MiSLAS/imb001/stage1_imb001/code'
+use_focal: False
+
+# dataset & model setting
+dataset: 'cifar10'
+data_path: '/media/gaor2/Elements/data/cifar10'
+num_classes: 10
+imb_factor: 0.01
+
+backbone: 'resnet32_fe'
+largenet: False
+
+resume: ''
+head_class_idx:
+  - 0
+  - 3
+med_class_idx:
+  - 3
+  - 7
+tail_class_idx:
+  - 7
+  - 10
+
+
+
+
+
+# Train
+mode: 'stage1'
+lr: 0.1
+batch_size: 128
+weight_decay: 5e-4
+num_epochs: 300
+momentum: 0.9
+cos: False
+mixup: False
+alpha: 1.0
+
+
+
+
