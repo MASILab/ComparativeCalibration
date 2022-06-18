@@ -1,6 +1,8 @@
 # Comparative Analyeses of Calibration
 
-This repository includes the code for reproduce the results of our comparative study of confidence calibration in deep learning prediction. Our code are highly motivated by https://github.com/dvlab-research/MiSLAS. 
+This repository includes the code for reproduce the results of our comparative study of confidence calibration in deep learning prediction. More comprehensive code and tutorials will be available when review is completed. 
+
+
 
 
 ## Examples for Running
@@ -40,7 +42,8 @@ To train a model for Stage-2 with *temperature scaling*:
 python temperature_scaling.py --cfg ./cconfig/cifar10_trvaltt/cifar10_imb001_stage1.yaml  resume '/media/gaor2/Elements/saved_file/Calibration/MiSLAS/imb001/stage1_imb001/ckps/model_best.pth.tar'
 ```
 
+## Acknowledgement
 
-
+Our code are highly motivated by https://github.com/dvlab-research/MiSLAS. 
 
 
